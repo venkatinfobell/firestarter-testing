@@ -47,3 +47,6 @@ import PatientFHIRJson from './json/patient.json';
         </ul>
   </template></patient-card>
 </template>
+
+<style>
+</style>
