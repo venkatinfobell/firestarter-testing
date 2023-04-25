@@ -1,7 +1,9 @@
 <script setup>
-import { PatientCard, PatientTable } from 'fire-starters';
+import { PatientCard, PatientTable, ImmunizationCard } from 'fire-starters';
 import PatientFHIRJson from './json/patient.json';
-import patientTableFHIRJson from './json/patient-table.json'; 
+import PatientTableFHIRJson from './json/patient-table.json'; 
+import ImmunizationCardFHIRJson from './json/immunization-card.json';
+
 </script>
 
 <script>
@@ -9,12 +11,14 @@ import patientTableFHIRJson from './json/patient-table.json';
   export default {
     components: {
       PatientCard,
-      PatientTable
+      PatientTable,
+      ImmunizationCard
     },
     data() {
       return {
         fhirJson: PatientFHIRJson,
-        patientTable: patientTableFHIRJson
+        patientTable: PatientTableFHIRJson,
+        immunizationCard: ImmunizationCardFHIRJson,
       };
     },
   };
@@ -48,9 +52,12 @@ import patientTableFHIRJson from './json/patient-table.json';
             PDF
           </li>
         </ul>
-  </template></patient-card>
+    </template>
+  </patient-card>
   
-  <patient-table :data="patientTable" class="pt-2"></patient-table>
+  <patient-table :data="patientTable" class="pt-3"></patient-table>
+  
+  <immunization-card :data="immunizationCard" class="pt-3"></immunization-card>
 </template>
 
 <style>
