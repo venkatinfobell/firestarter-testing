@@ -49,6 +49,8 @@ import patientTableFHIRJson from './json/patient-table.json';
           </li>
         </ul>
   </template></patient-card>
+  
+  <patient-table :data="patientTable" class="pt-2"></patient-table>
 </template>
 
 <style>
