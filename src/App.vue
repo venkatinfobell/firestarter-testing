@@ -1,6 +1,7 @@
 <script setup>
-import { PatientCard } from 'fire-starters';
+import { PatientCard, PatientTable } from 'fire-starters';
 import PatientFHIRJson from './json/patient.json';
+import patientTableFHIRJson from './json/patient-table.json'; 
 </script>
 
 <script>
@@ -8,10 +9,12 @@ import PatientFHIRJson from './json/patient.json';
   export default {
     components: {
       PatientCard,
+      PatientTable
     },
     data() {
       return {
         fhirJson: PatientFHIRJson,
+        patientTable: patientTableFHIRJson
       };
     },
   };
