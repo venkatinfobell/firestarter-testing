@@ -25,6 +25,7 @@ import ImmunizationCardFHIRJson from './json/immunization-card.json';
 </script>
 
 <template>
+  <h4>Patient Card</h4>
   <patient-card :data="fhirJson">
     <template #toolbarTemplate>
        <button
@@ -55,10 +56,15 @@ import ImmunizationCardFHIRJson from './json/immunization-card.json';
     </template>
   </patient-card>
   
-  <patient-table :data="patientTable" class="pt-3"></patient-table>
+  <h4 class="pt-3">Patient Table</h4>
+  <patient-table :data="patientTable"></patient-table>
   
-  <immunization-card :data="immunizationCard" class="pt-3"></immunization-card>
+  <h4 class="pt-3">Immunization Card</h4>
+  <immunization-card :data="immunizationCard"></immunization-card>
 </template>
 
 <style>
+ h4 {
+   text-align: left;
+ }
 </style>
